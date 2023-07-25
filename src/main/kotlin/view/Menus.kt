@@ -261,7 +261,7 @@ class Menus {
             println("4\uFE0F⃣-Finalizar Pedido ✅\n")
         }
         fun menuPagamento(){
-            println("\u0031\uFE0F\u20E3-Cartão de crédito \uD83D\uDCB3")
+            println("1\uFE0F⃣-Cartão de crédito \uD83D\uDCB3")
             println("2\uFE0F⃣-Cartão de débito  \uD83D\uDCB3")
             println("3\uFE0F⃣-Vale alimentação \uD83D\uDCB3")
             println("4\uFE0F⃣-Dinheiro \uD83D\uDCB5\n")

@@ -38,6 +38,7 @@ class MenuPrincipalController(var carrinho: Carrinho,var produtoRepository: Prod
                 val bebida = produtoRepository.retornaBebidas(opcaoLanche.toInt())
                 println("Digite a quatidade desejada ⬇\uFE0F:")
                 val quantidade = readln().toInt()
+                VerificaInputs.verificaQuantidade(quantidade)
                 carrinho.adicionarProduto(bebida, quantidade)
                 VerificaInputs.t.println(TextColors.green("✅ Bebida Adicionado com sucesso\n"))
                 Menus.carrinho(carrinho)
