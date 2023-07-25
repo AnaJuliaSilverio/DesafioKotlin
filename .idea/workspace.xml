@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1377fc86-8a31-4f57-9826-634f544249f5" name="Changes" comment="Atualizando pacote">
+    <list default="true" id="1377fc86-8a31-4f57-9826-634f544249f5" name="Changes" comment="Atualizando Menu secundário">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuPrincipalController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuPrincipalController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuSecController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuSecController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Utils/VerificaInputs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Utils/VerificaInputs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/view/Menus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/view/Menus.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +42,8 @@
     "last_opened_file_path": "C:/Users/ana.silveiro/Downloads/DesafioKotlin/src/main/kotlin",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.4275862"
+    "project.structure.side.proportion": "0.4275862",
+    "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -96,13 +95,21 @@
       <option name="project" value="LOCAL" />
       <updated>1690298620360</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Atualizando Menu secundário">
+      <created>1690300067863</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690300067863</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Atualizando pacote" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualizando pacote" />
+    <MESSAGE value="Atualizando Menu secundário" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizando Menu secundário" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DesafioKotlin$MainKt.ic" NAME="MainKt Coverage Results" MODIFIED="1690238351467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

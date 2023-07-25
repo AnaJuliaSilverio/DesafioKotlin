@@ -22,6 +22,7 @@ class MenuSecController(var carrinho: Carrinho,var nome:String){
                     VerificaInputs.verificaQuantidade(quantidade)
                     carrinho.atualizarQuantidade(produto, quantidade)
                     VerificaInputs.t.println(TextColors.green("✅ Produto atualizado\n"))
+                    Menus.carrinho(carrinho)
                     break
                 } else {
                     VerificaInputs.t.println(TextColors.red("❌ Código do produto inválido\n"))
@@ -43,6 +44,7 @@ class MenuSecController(var carrinho: Carrinho,var nome:String){
                if (produto != null) {
                    carrinho.retirarProdutoCarrinho(produto)
                    VerificaInputs.t.println(TextColors.green("✅ Produto removido\n"))
+                   Menus.carrinho(carrinho)
                    break
                } else {
                    VerificaInputs.t.println(TextColors.red("❌ Código do produto inválido\n"))
