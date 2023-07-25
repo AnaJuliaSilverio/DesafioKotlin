@@ -18,7 +18,9 @@ class MenuSecController(var carrinho: Carrinho,var nome:String){
                 val produto = carrinho.produtoExiste(readln().toInt())
                 if (produto != null) {
                     println("Digite a nova quantidade: ")
-                    carrinho.atualizarQuantidade(produto, readln().toInt())
+                    val quantidade = readln().toInt()
+                    VerificaInputs.verificaQuantidade(quantidade)
+                    carrinho.atualizarQuantidade(produto, quantidade)
                     VerificaInputs.t.println(TextColors.green("✅ Produto atualizado\n"))
                     break
                 } else {
@@ -26,6 +28,8 @@ class MenuSecController(var carrinho: Carrinho,var nome:String){
                 }
             }catch (erro:NumberFormatException){
                 println((TextColors.red("❌ Formato inválido,informe um valor numérico.")))
+            }catch (erro:IllegalArgumentException){
+                println(erro.message)
             }
 
         }
@@ -52,8 +56,17 @@ class MenuSecController(var carrinho: Carrinho,var nome:String){
         while (true){
             try {
                 if (carrinho.carrinho.isEmpty()){
-                    println(TextColors.red("❗ O carrinho está vázio. Adicione algo antes de finalizar"))
-                    return
+                    println(TextColors.red("❗ O carrinho está vázio. Deseja adicionar algo antes de finalizar?"))
+                    println("1\uFE0F⃣ -Sim")
+                    println("2\uFE0F⃣ -Não\n")
+                    val resposta = readln()
+                    VerificaInputs.verificaOpcao(resposta)
+                    if (resposta=="1") return
+                    else {
+                        VerificaInputs.t.println(TextColors.magenta("Te vejo na próxima \uD83D\uDE04 Tchau,tchau"))
+                        exitProcess(0)
+                    }
+
                 }
                 else{
                     Menus.menuPagamento()

@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1377fc86-8a31-4f57-9826-634f544249f5" name="Changes" comment="Atualizando pacote">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuPrincipalController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuPrincipalController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuSecController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuSecController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Utils/VerificaInputs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Utils/VerificaInputs.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690291382889</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Atualizando pacote">
+      <created>1690298620360</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690298620360</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

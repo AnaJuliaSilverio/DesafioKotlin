@@ -23,6 +23,9 @@ class VerificaInputs {
                 throw IllegalArgumentException(TextColors.red("❗ Opção inválida, tente novamente"))
             }
         }
+        fun verificaQuantidade(qtd:Int){
+            if (qtd<=0) throw IllegalArgumentException((TextColors.red("❌ Quantidade deve ser superior a zero")))
+        }
 
         fun verificaNumeroCartao(numeroCartao: String){
             val numeroCartaoSemEspaco = numeroCartao.replace(" ","")

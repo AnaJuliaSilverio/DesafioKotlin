@@ -18,6 +18,7 @@ class MenuPrincipalController(var carrinho: Carrinho,var produtoRepository: Prod
                 val lanche = produtoRepository.retornaLanche(opcaoLanche.toInt())
                 println("Digite a quatidade desejada ⬇\uFE0F:")
                 val quantidade = readln().toInt()
+                VerificaInputs.verificaQuantidade(quantidade)
                 carrinho.adicionarProduto(lanche, quantidade)
                 VerificaInputs.t.println(TextColors.green("✅ Lanche Adicionado com sucesso\n"))
                 Menus.carrinho(carrinho)
