@@ -15,8 +15,8 @@ class PagamentoDinheiro:Pagamento {
             try {
                 println("Qual valor em dinheiro deseja pagar?")
                 valorRecebido = readln().toDouble()
-                if ((valorRecebido-valor)>0) troco = valorRecebido-valor
-                else if ((valorRecebido-valor)<0) throw IllegalArgumentException(TextColors.red("❌ Quantidade inválida,o valor do seu pedido é de R$%.2f".format(valor)))
+                VerificaInputs.verificaPreco(valorRecebido-valor)
+                troco = valorRecebido-valor
                 VerificaInputs.t.println(TextColors.green("✅ Pagamento com dinheiro realizado com sucesso\n"))
                 this.valor = valor
                 break
@@ -24,7 +24,7 @@ class PagamentoDinheiro:Pagamento {
                 println((TextColors.red("❌ Formato inválido,informe um valor numérico.")))
             }
             catch (erro:IllegalArgumentException){
-                println(erro.message)
+                println((TextColors.red("❌ Quantidade inválida,o valor do seu pedido é de R$%.2f".format(valor))))
             }
         }
 
