@@ -119,7 +119,6 @@ class VerificaInputsTest {
         assertThrows(IllegalArgumentException::class.java){
             VerificaInputs.verificaPreco(-5.5)
         }
-
     }
 
 }
