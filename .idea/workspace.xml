@@ -4,30 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1377fc86-8a31-4f57-9826-634f544249f5" name="Changes" comment="Adicionando maior cobertura">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Controller/CarrinhoController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Controller/ProcessadorPagamentoController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Model/Pedido.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Strategy/PagamentoCartao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Strategy/PagamentoCartaoCredito.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Strategy/PagamentoCartaoDebito.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Strategy/PagamentoDinheiro.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Strategy/PagamentoStrategy.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Strategy/PagamentoValeAlimentacao.kt" afterDir="false" />
+    <list default="true" id="1377fc86-8a31-4f57-9826-634f544249f5" name="Changes" comment="Aplicando conceito de solid e clean code">
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ControllerTest/CarrinhoControllerTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ControllerTest/ProcessadorPagamentoControllerTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/StrategyTest/PagamentoCartaoCreditoTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/StrategyTest/PagamentoCartaoTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/StrategyTest/PagamentoDinheiroTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/StrategyTest/PagamentoValeAlimentacaoTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuPrincipalController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuPrincipalController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Controller/CarrinhoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Controller/CarrinhoController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuSecController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Controller/MenuSecController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Model/Pagamento.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Model/PagamentoCartaoCredito.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Model/CartaoCredito.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Model/PagamentoCartaoDebito.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Model/CartaoDebito.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Model/PagamentoDinheiro.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Model/Dinheiro.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Model/PagamentoValeAlimentacao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Model/ValeAlimentacao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Repository/ProdutoRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Repository/ProdutoRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/view/Menus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/view/Menus.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ContrellerTest/MenuControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ControllerTest/MenuControllerTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ModelTests/PagamentoDinheiroTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Controller/ProcessadorPagamentoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Controller/ProcessadorPagamentoController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Strategy/PagamentoDinheiro.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Strategy/PagamentoDinheiro.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Strategy/PagamentoValeAlimentacao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Strategy/PagamentoValeAlimentacao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ControllerTest/MenuControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ControllerTest/MenuControllerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/RepositoryTest/ProdutoRepositoryTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/RepositoryTest/ProdutoRepositoryTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +35,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -79,8 +75,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="MenuControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CarrinhoControllerTest.atualizarProdutoCarrinhoCodInvalido">
+    <configuration name="CarrinhoControllerTest.atualizarProdutoCarrinhoCodInvalido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DesafioKotlin" />
       <extension name="coverage">
         <pattern>
@@ -88,30 +84,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ContrellerTest" />
-      <option name="MAIN_CLASS_NAME" value="ControllerTest.MenuControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MenuControllerTest.testMenuSecundarioOpcao2ChamaMenuSecAtualizar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DesafioKotlin" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ControllerTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ContrellerTest" />
-      <option name="MAIN_CLASS_NAME" value="ControllerTest.MenuControllerTest" />
-      <option name="METHOD_NAME" value="testMenuSecundarioOpcao2ChamaMenuSecAtualizar" />
+      <option name="PACKAGE_NAME" value="ControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ControllerTest.CarrinhoControllerTest" />
+      <option name="METHOD_NAME" value="atualizarProdutoCarrinhoCodInvalido" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuControllerTest.testMenuSecundarioOpcao4ChamaFinalizar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CarrinhoControllerTest.atualizarProdutoCarrinhoCodValido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DesafioKotlin" />
       <extension name="coverage">
         <pattern>
@@ -119,44 +100,61 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ContrellerTest" />
-      <option name="MAIN_CLASS_NAME" value="ControllerTest.MenuControllerTest" />
-      <option name="METHOD_NAME" value="testMenuSecundarioOpcao4ChamaFinalizar" />
+      <option name="PACKAGE_NAME" value="ControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ControllerTest.CarrinhoControllerTest" />
+      <option name="METHOD_NAME" value="atualizarProdutoCarrinhoCodValido" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VerificaInputsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DesafioKotlin" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="UtilsTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="UtilsTests" />
-      <option name="MAIN_CLASS_NAME" value="UtilsTests.VerificaInputsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="kotlin in DesafioKotlin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest in DesafioKotlin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DesafioKotlin" />
       <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/kotlin" />
+      <dir value="$PROJECT_DIR$/src/test/kotlin/ControllerTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PagamentoCartaoDebitoTest.coletarDadosComValoresValidos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DesafioKotlin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="StrategyTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="StrategyTest" />
+      <option name="MAIN_CLASS_NAME" value="StrategyTest.PagamentoCartaoDebitoTest" />
+      <option name="METHOD_NAME" value="coletarDadosComValoresValidos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PagamentoValeAlimentacaoTest.coletarDadosComValoresValidos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DesafioKotlin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="StrategyTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="StrategyTest" />
+      <option name="MAIN_CLASS_NAME" value="StrategyTest.PagamentoValeAlimentacaoTest" />
+      <option name="METHOD_NAME" value="coletarDadosComValoresValidos" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VerificaInputsTest" />
-        <item itemvalue="JUnit.kotlin in DesafioKotlin" />
-        <item itemvalue="JUnit.MenuControllerTest.testMenuSecundarioOpcao4ChamaFinalizar" />
-        <item itemvalue="JUnit.MenuControllerTest.testMenuSecundarioOpcao2ChamaMenuSecAtualizar" />
-        <item itemvalue="JUnit.MenuControllerTest" />
+        <item itemvalue="JUnit.CarrinhoControllerTest.atualizarProdutoCarrinhoCodInvalido" />
+        <item itemvalue="JUnit.CarrinhoControllerTest.atualizarProdutoCarrinhoCodValido" />
+        <item itemvalue="JUnit.ControllerTest in DesafioKotlin" />
+        <item itemvalue="JUnit.PagamentoCartaoDebitoTest.coletarDadosComValoresValidos" />
+        <item itemvalue="JUnit.PagamentoValeAlimentacaoTest.coletarDadosComValoresValidos" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691008056562</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Aplicando conceito de solid e clean code">
+      <created>1691508244954</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1691508244954</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -248,11 +253,12 @@
     <MESSAGE value="Atualizando Menu secundário" />
     <MESSAGE value="Adicionando Testes" />
     <MESSAGE value="Adicionando maior cobertura" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando maior cobertura" />
+    <MESSAGE value="Aplicando conceito de solid e clean code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aplicando conceito de solid e clean code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DesafioKotlin$MainKt.ic" NAME="MainKt Coverage Results" MODIFIED="1690238351467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/DesafioKotlin$kotlin_in_DesafioKotlin.ic" NAME="kotlin in DesafioKotlin Coverage Results" MODIFIED="1691008163902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/DesafioKotlin$kotlin_in_DesafioKotlin.ic" NAME="kotlin in DesafioKotlin Coverage Results" MODIFIED="1691513892226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DesafioKotlin$ModelTests_in_DesafioKotlin.ic" NAME="ModelTests in DesafioKotlin Coverage Results" MODIFIED="1690397563189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

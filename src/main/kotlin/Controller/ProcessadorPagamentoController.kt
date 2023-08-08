@@ -15,7 +15,7 @@ class ProcessadorPagamentoController(val carrinho: Carrinho,val nome:String){
         exitProcess(0)
     }
 
-    private fun criarFormaPagamento(opcao:String):PagamentoStrategy?{
+     fun criarFormaPagamento(opcao:String):PagamentoStrategy?{
         return when (opcao) {
             "1" -> PagamentoCartaoCredito()
             "2" -> PagamentoCartaoDebito()

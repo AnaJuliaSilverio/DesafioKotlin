@@ -31,7 +31,6 @@ class PagamentoDinheiro:PagamentoStrategy {
     fun getValorRecebido():Double{
         println("Qual valor em dinheiro deseja pagar?")
         val valorRecebido = readln().toDouble()
-        VerificaInputs.verificaPreco(valorRecebido-totalPedido)
         return valorRecebido
     }
 }

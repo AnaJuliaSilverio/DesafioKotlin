@@ -48,7 +48,7 @@ class MenuSecController(var carrinhoController: CarrinhoController,val processad
     fun menuSecFinalizar(){
         while (true){
             try {
-                carrinhoController.verificaCarrinhoVazio()
+                finzalizarCarrinhoVazio()
                 Menus.menuPagamento()
                 println("Digite a forma de pagamento ⬇\uFE0F")
                 val pagamentoOpcao = readln()
@@ -58,6 +58,20 @@ class MenuSecController(var carrinhoController: CarrinhoController,val processad
                 println(erro.message)
             }
         }
+    }
+    fun finzalizarCarrinhoVazio(){
+        if (carrinhoController.carrinho.carrinho.isEmpty()){
+            println(TextColors.red("❗ O carrinho está vázio. Deseja adicionar algo antes de finalizar?"))
+            println("1\uFE0F⃣ -Sim")
+            println("2\uFE0F⃣ -Não\n")
+            val resposta = readln()
+            VerificaInputs.verificaOpcao(resposta)
+            if (resposta=="1") return
+            else {
+                println(TextColors.magenta("Te vejo na próxima \uD83D\uDE04 Tchau,tchau"))
+                exitProcess(0)
+                }
+            }
     }
 
 }

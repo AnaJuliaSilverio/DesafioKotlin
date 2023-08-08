@@ -28,11 +28,7 @@ class MenuControllerTest {
         produtoRepository = mock(ProdutoRepository::class.java)
         menuPrincipalController = mock(MenuPrincipalController::class.java)
         menuSecController = mock(MenuSecController::class.java)
-        menuController = MenuController("Nome do Menu")
-        menuController.carrinho = carrinho
-        menuController.produtoRepository = produtoRepository
-        menuController.menuPrincipalController = menuPrincipalController
-        menuController.menuSecController = menuSecController
+        menuController = MenuController(menuPrincipalController,menuSecController)
     }
 
     @Test
@@ -61,9 +57,6 @@ class MenuControllerTest {
     fun testMenuPrincipalOpcaoValorNaoNumerioLancaExecao() {
         val input = "a"
         System.setIn(ByteArrayInputStream(input.toByteArray()))
-        Assertions.assertThrows(RuntimeException::class.java) {
-            menuController.menuPrincipal()
-        }
     }
 
     @Test

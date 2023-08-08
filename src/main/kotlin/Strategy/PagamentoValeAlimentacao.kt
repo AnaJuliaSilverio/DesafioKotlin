@@ -35,7 +35,8 @@ class PagamentoValeAlimentacao:PagamentoStrategy {
     }
     fun getDataValidade():LocalDate{
         println("Digite a data de validade do cartão: ")
-        val dataValidade = LocalDate.parse(readln(), VerificaInputs.formatter)
+        val dataRecebida = readln()
+        val dataValidade = LocalDate.parse(dataRecebida, VerificaInputs.formatter)
         if (dataValidade.isBefore(LocalDate.now())) throw IllegalArgumentException(TextColors.red("❌ Data inválida"))
         return dataValidade
     }
