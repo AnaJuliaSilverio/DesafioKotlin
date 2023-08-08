@@ -6,11 +6,9 @@ import Utils.VerificaInputs
 import view.Menus
 import java.lang.IllegalArgumentException
 
-class MenuController(var nome:String) {
-    var carrinho = Carrinho()
-    var produtoRepository = ProdutoRepository()
-    var menuPrincipalController = MenuPrincipalController(carrinho, produtoRepository)
-    var menuSecController = MenuSecController(carrinho,nome)
+class MenuController(val menuPrincipalController: MenuPrincipalController,val menuSecController: MenuSecController) {
+
+
     fun menuPrincipal() {
         while (true){
             println("Digite a opção desejada ⬇\uFE0F: \n")

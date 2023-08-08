@@ -1,4 +1,4 @@
-package ContrellerTest
+package ControllerTest
 
 import Controller.MenuController
 import Controller.MenuPrincipalController
@@ -65,7 +65,6 @@ class MenuControllerTest {
             menuController.menuPrincipal()
         }
     }
-
 
     @Test
     fun testMenuSecundarioOpcao2ChamaMenuSecAtualizar() {

@@ -8,21 +8,26 @@ import view.Menus
 import java.lang.IllegalArgumentException
 import java.lang.NumberFormatException
 
-class MenuPrincipalController(var carrinho: Carrinho,var produtoRepository: ProdutoRepository){
+class MenuPrincipalController(private var carrinhoController:CarrinhoController){
+    private var opcaoMenu:String = ""
+    private var quantidade = 0
+    fun menuPrincipal(){
+        println("Digite a opção desejada ⬇\uFE0F: \n")
+        opcaoMenu = readln()
+        VerificaInputs.verificaOpcao(opcaoMenu)
+        println("Digite a quatidade desejada ⬇\uFE0F:")
+        quantidade = readln().toInt()
+        VerificaInputs.verificaQuantidade(quantidade)
+
+    }
     fun menuPrincipalLanches(){
         while (true){
             try {
                 Menus.menuLanche()
-                println("Digite a opção desejada ⬇\uFE0F: \n")
-                val opcaoLanche = readln()
-                VerificaInputs.verificaOpcao(opcaoLanche)
-                val lanche = produtoRepository.retornaLanche(opcaoLanche.toInt())
-                println("Digite a quatidade desejada ⬇\uFE0F:")
-                val quantidade = readln().toInt()
-                VerificaInputs.verificaQuantidade(quantidade)
-                carrinho.adicionarProduto(lanche, quantidade)
-                VerificaInputs.t.println(TextColors.green("✅ Lanche Adicionado com sucesso\n"))
-                Menus.carrinho(carrinho)
+                menuPrincipal()
+                carrinhoController.adicionarProduto(opcaoMenu.toInt(),quantidade,"Lanche")
+                println(TextColors.green("✅ Lanche Adicionado com sucesso\n"))
+                Menus.carrinho(carrinhoController.carrinho )
                 break
             }catch (erro: NumberFormatException){
                 println((TextColors.red("❌ Formato inválido,informe um valor numérico.")))
@@ -30,29 +35,26 @@ class MenuPrincipalController(var carrinho: Carrinho,var produtoRepository: Prod
             catch (erro: IllegalArgumentException){
                 println(erro.message)
             }
+
         }
     }
     fun menuPrincipalBebidas(){
+
         while (true){
             try {
                 Menus.menuBebida()
-                println("Digite a opção desejada ⬇\uFE0F: \n")
-                val opcaoLanche = readln()
-                VerificaInputs.verificaOpcao(opcaoLanche)
-                val bebida = produtoRepository.retornaBebidas(opcaoLanche.toInt())
-                println("Digite a quatidade desejada ⬇\uFE0F:")
-                val quantidade = readln().toInt()
-                VerificaInputs.verificaQuantidade(quantidade)
-                carrinho.adicionarProduto(bebida, quantidade)
-                VerificaInputs.t.println(TextColors.green("✅ Bebida Adicionado com sucesso\n"))
-                Menus.carrinho(carrinho)
+                menuPrincipal()
+                carrinhoController.adicionarProduto(opcaoMenu.toInt(),quantidade,"Bebida")
+                println(TextColors.green("✅ Bebida adicionada com sucesso\n"))
+                Menus.carrinho(carrinhoController.carrinho )
                 break
-            }catch (erro:NumberFormatException){
+            }catch (erro: NumberFormatException){
                 println((TextColors.red("❌ Formato inválido,informe um valor numérico.")))
             }
             catch (erro: IllegalArgumentException){
                 println(erro.message)
             }
+
         }
     }
 

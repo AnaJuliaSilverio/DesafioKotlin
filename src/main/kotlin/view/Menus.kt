@@ -1,7 +1,7 @@
 package view
-import Model.Pagamento
-import Model.PagamentoDinheiro
+import Model.Pedido
 import Repository.Carrinho
+import Strategy.PagamentoDinheiro
 import Utils.VerificaInputs
 import com.github.ajalt.mordant.rendering.BorderType.Companion.SQUARE_DOUBLE_SECTION_SEPARATOR
 import com.github.ajalt.mordant.rendering.TextAlign.*
@@ -79,7 +79,7 @@ class Menus {
             terminal.println(table)
         }
 
-        fun notaFiscal(carrinho: Carrinho,nome:String,pagamento: Pagamento) {
+        fun notaFiscal(pedido: Pedido) {
             val terminal = Terminal()
             val tableNota = table {
                 borderType = SQUARE_DOUBLE_SECTION_SEPARATOR
@@ -95,7 +95,7 @@ class Menus {
                 body {
                     cellBorders = BOTTOM
                     row { }
-                    row("${magenta("Nome:")} $nome            ${magenta("Data: ")}${LocalDate.now().format(VerificaInputs.formatter)}")
+                    row("${magenta("Nome:")} ${pedido.nomeCliente}            ${magenta("Data: ")}${LocalDate.now().format(VerificaInputs.formatter)}")
                 }
 
 
@@ -119,9 +119,9 @@ class Menus {
                     column(0) {
                         cellBorders = TOP_BOTTOM
                     }
-                    for (item in carrinho.carrinho.keys) {
+                    for (item in pedido.carinhho.keys) {
                         row( item.nome, "R$%.2f".format(item.preco
-                        ), carrinho.carrinho[item])
+                        ), pedido.carinhho[item])
                     }
                     row {  }
                 }
@@ -129,20 +129,21 @@ class Menus {
                     cellBorders = TOP_BOTTOM
                     row {
                         cell("Total")
-                        cell(yellow("R$%.2f".format(carrinho.calculaTotal()))) {
+                        cell(yellow("R$%.2f".format(pedido.pagamentoStrategy.totalPedido))) {
                             columnSpan = 3
                         }
                     }
-                    if (pagamento is PagamentoDinheiro){
+                    if (pedido.pagamentoStrategy is PagamentoDinheiro){
+                        val pagamento = pedido.pagamentoStrategy as? PagamentoDinheiro
                         row {
                             cell("Valor Pago")
-                            cell(yellow("R$%.2f".format(pagamento.valorRecebido))){
+                            cell(yellow("R$%.2f".format(pagamento!!.dinheiro.valorRecebido))){
                                 columnSpan = 3
                             }
                         }
                         row {
                             cell("Troco")
-                            cell(yellow("R$%.2f".format(pagamento.troco))){
+                            cell(yellow("R$%.2f".format(pagamento!!.dinheiro.troco))){
                                 columnSpan = 3
                             }
                         }
